@@ -1,0 +1,16 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace t=TYPO3\Neos\ViewHelpers}
+<f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
+	<f:then>
+		<t:contentElement node="{node}">
+			<ul class="social-bookmark">
+				<ts:renderTypoScript path="socialBookmarkItemCollection" />
+			</ul>
+		</t:contentElement>
+	</f:then>
+	<f:else>
+		<ul class="social-bookmark">
+			<ts:renderTypoScript path="socialBookmarkItemCollection" />
+		</ul>
+	</f:else>
+</f:security.ifAccess>

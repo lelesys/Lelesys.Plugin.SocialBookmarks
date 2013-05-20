@@ -1,0 +1,16 @@
+prototype(Lelesys.Plugin.NodeTypes:SocialBookmarks) < prototype(TYPO3.TypoScript:Template)
+prototype(Lelesys.Plugin.NodeTypes:SocialBookmarks) {
+	templatePath = 'resource://Lelesys.Plugin.SocialBookmarks/Private/Templates/TypoScript/SocialBookmarkStructure.html'
+	socialBookmarkCollection = ${q(node).children('socialBookmark').children()}
+	socialBookmarkItemCollection = TYPO3.Neos.NodeTypes:Section
+	socialBookmarkItemCollection {
+		nodePath = 'socialBookmark'
+		collection = ${q(node).children()}
+	}
+}
+
+prototype(Lelesys.Plugin.NodeTypes:SocialBookmarkItem) < prototype(TYPO3.Neos.NodeTypes:Text)
+prototype(Lelesys.Plugin.NodeTypes:SocialBookmarkItem) {
+	templatePath = 'resource://Lelesys.Plugin.SocialBookmarks/Private/Templates/TypoScript/SocialBookmarkItem.html'
+	socialBookmarkList = ${q(node).property('socialBookmarkList')}
+}
