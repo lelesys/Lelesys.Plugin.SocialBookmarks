@@ -15,6 +15,7 @@
   ui:
     label: 'Lelesys SocialBookmark Item'
     group: 'Plugins'
+    inlineEditable: TRUE
     icon:
       light: 'Images/Icons/White/columns_icon-16.png'
       dark: 'Images/Icons/Black/columns_icon-16.png'

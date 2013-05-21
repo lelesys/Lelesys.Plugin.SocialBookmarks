@@ -1,4 +1,16 @@
+ul.social-bookmark {
+	margin-left: 0;
+}
+
 ul.social-bookmark li {
 	display: inline;
-	padding: 5px;
+	margin-right: 6px;
+}
+
+ul.social-bookmark div.lelesys-plugin-nodetypes-socialbookmarkitem {
+	display: inline-block;
+}
+
+ul.social-bookmark .t3-contentelement .t3-contentelement-handle-container .btn-toolbar .btn-group {
+	right: -165px;
 }
