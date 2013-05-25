@@ -1,48 +1,50 @@
+
 'Lelesys.Plugin.NodeTypes:SocialBookmarks':
-  superTypes: ['TYPO3.Neos.NodeTypes:ContentObject']
+  superTypes:
+    - 'TYPO3.Neos:Content'
   ui:
     label: 'Lelesys SocialBookmark Structure'
-    group: 'Plugins'
+    group: Plugins
     icon:
-      light: 'Images/Icons/White/columns_icon-16.png'
-      dark: 'Images/Icons/Black/columns_icon-16.png'
+      light: Images/Icons/White/columns_icon-16.png
+      dark: Images/Icons/Black/columns_icon-16.png
   childNodes:
     socialBookmark:
-      type: 'TYPO3.Neos.NodeTypes:Section'
-
+      type: 'TYPO3.Neos:ContentCollection'
 'Lelesys.Plugin.NodeTypes:SocialBookmarkItem':
-  superTypes: ['TYPO3.Neos.NodeTypes:Text']
+  superTypes:
+    - 'TYPO3.Neos.NodeTypes:Text'
   ui:
     label: 'Lelesys SocialBookmark Item'
-    group: 'Plugins'
-    inlineEditable: TRUE
+    group: Plugins
+    inlineEditable: true
     icon:
-      light: 'Images/Icons/White/columns_icon-16.png'
-      dark: 'Images/Icons/Black/columns_icon-16.png'
+      light: Images/Icons/White/columns_icon-16.png
+      dark: Images/Icons/Black/columns_icon-16.png
     inspector:
       groups:
         options:
-          label: 'Options'
+          label: Options
           priority: 30
   properties:
     socialBookmarkList:
       type: string
-      defaultValue: 'social-facebook-box-blue-icon.png'
+      defaultValue: social-facebook-box-blue-icon.png
       ui:
         label: 'Select Social Media'
         inspector:
-          group: 'options'
+          group: options
           editor: T3.Content.UI.Editor.Selectbox
           editorOptions:
             values:
-              'social-facebook-box-blue-icon.png':
-                label: 'Facebook'
-              'social-twitter-box-blue-icon.png':
-                label: 'Twitter'
-              'social-linkedin-box-blue-icon.png':
-                label: 'Linkedin'
-              'Google-plus-icon.png':
+              social-facebook-box-blue-icon.png:
+                label: Facebook
+              social-twitter-box-blue-icon.png:
+                label: Twitter
+              social-linkedin-box-blue-icon.png:
+                label: Linkedin
+              Google-plus-icon.png:
                 label: 'Google plus'
-              'social-digg-box-white-icon.png':
-                label: 'Digg'
-        reloadIfChanged: TRUE
+              social-digg-box-white-icon.png:
+                label: Digg
+        reloadIfChanged: true

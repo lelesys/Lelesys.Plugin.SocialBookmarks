@@ -1,8 +1,8 @@
-prototype(Lelesys.Plugin.NodeTypes:SocialBookmarks) < prototype(TYPO3.TypoScript:Template)
+prototype(Lelesys.Plugin.NodeTypes:SocialBookmarks) < prototype(TYPO3.Neos:Template)
 prototype(Lelesys.Plugin.NodeTypes:SocialBookmarks) {
 	templatePath = 'resource://Lelesys.Plugin.SocialBookmarks/Private/Templates/TypoScript/SocialBookmarkStructure.html'
 	socialBookmarkCollection = ${q(node).children('socialBookmark').children()}
-	socialBookmarkItemCollection = TYPO3.Neos.NodeTypes:Section
+	socialBookmarkItemCollection = TYPO3.Neos:ContentCollection
 	socialBookmarkItemCollection {
 		nodePath = 'socialBookmark'
 		collection = ${q(node).children()}
