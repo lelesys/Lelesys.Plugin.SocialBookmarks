@@ -4,13 +4,13 @@
 	<f:then>
 		<t:contentElement node="{node}">
 			<ul class="social-bookmark">
-				<ts:renderTypoScript path="socialBookmarkItemCollection" />
+				<ts:render path="socialBookmarkItemCollection" />
 			</ul>
 		</t:contentElement>
 	</f:then>
 	<f:else>
 		<ul class="social-bookmark">
-			<ts:renderTypoScript path="socialBookmarkItemCollection" />
+			<ts:render path="socialBookmarkItemCollection" />
 		</ul>
 	</f:else>
 </f:security.ifAccess>
