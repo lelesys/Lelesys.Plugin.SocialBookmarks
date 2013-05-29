@@ -34,7 +34,7 @@
         label: 'Select Social Media'
         inspector:
           group: options
-          editor: T3.Content.UI.Editor.Selectbox
+          editor: Content/Inspector/Editors/SelectBoxEditor
           editorOptions:
             values:
               social-facebook-box-blue-icon.png:
