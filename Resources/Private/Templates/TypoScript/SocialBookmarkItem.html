@@ -3,27 +3,7 @@
 <f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
 	<f:then>
 		<t:contentElement node="{node}">
-			<f:if condition="{socialBookmarkList} == 'social-facebook-box-blue-icon.png'">
-				<f:then>
-					<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
-				</f:then>
-			</f:if>
-			<f:if condition="{socialBookmarkList} == 'social-twitter-box-blue-icon.png'">
-				<f:then>
-					<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
-				</f:then>
-			</f:if>
-			<f:if condition="{socialBookmarkList} == 'social-linkedin-box-blue-icon.png'">
-				<f:then>
-					<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
-				</f:then>
-			</f:if>
-			<f:if condition="{socialBookmarkList} == 'Google-plus-icon.png'">
-				<f:then>
-					<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
-				</f:then>
-			</f:if>
-			<f:if condition="{socialBookmarkList} == 'social-digg-box-white-icon.png'">
+			<f:if condition="{socialBookmarkList}">
 				<f:then>
 					<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
 				</f:then>
