@@ -1,4 +1,4 @@
-TYPO3 Neos Lelesys SocialBookmark Plugin
+Lelesys SocialBookmark Plugin
 ======================
 
 This plugin adds SocialBookmarks to TYPO3 Neos websites.
