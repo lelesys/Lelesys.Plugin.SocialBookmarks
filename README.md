@@ -1,16 +1,18 @@
 Lelesys SocialBookmark Plugin
 ======================
 
-This plugin adds SocialBookmarks to TYPO3 Neos websites.
+This plugin adds SocialBookmarks to your websites.
+
+Warning: This plugin is experimental.
 
 Quick start
 -----------
 
 * include the plugin's TypoScript definitions to your own one's
-(located in, for example, `Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2`)
+(located in, for example, `Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2`) with:
 
 ```
-with include: resource://Lelesys.Plugin.SocialBookmarks/Private/TypoScripts/Library/NodeTypes.ts2
+include: resource://Lelesys.Plugin.SocialBookmarks/Private/TypoScripts/Library/NodeTypes.ts2
 ```
 
 * include the plugin's Stylesheet to your own one's where you add other stylesheets of the site.
@@ -21,7 +23,7 @@ with include: resource://Lelesys.Plugin.SocialBookmarks/Private/TypoScripts/Libr
 
 Usage
 -----
-Add the plugin content element "Lelesys SocialBookmark Structure" to the position of your choice.
-Add the plugin content element "Lelesys SocialBookmark Item" under "Lelesys SocialBookmark Structure".
-In page inspector there is drop down available for social networking sites icons, where you can
+* add the plugin content element "Lelesys SocialBookmarks" to the position of your choice.
+* add the plugin content element "Lelesys SocialBookmarks Item" under "Lelesys SocialBookmarks".
+In page inspector there is drop down available for social networking sites icons,
 select icons of your choice.
