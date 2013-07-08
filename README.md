@@ -26,4 +26,4 @@ Usage
 * add the plugin content element "Lelesys SocialBookmarks" to the position of your choice.
 * add the plugin content element "Lelesys SocialBookmarks Item" under "Lelesys SocialBookmarks".
 In page inspector there is drop down available for social networking sites icons,
-select icons of your choice.
+where you can select icons of your choice.

@@ -25,7 +25,7 @@ use TYPO3\Flow\Annotations as Flow;
  * <a target="_blank" href="http://google.com"></a>
  *
  */
-class ShareLinkViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper {
+class ShareLinkViewHelper extends \TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper {
 
 	/**
 	 * @var \TYPO3\Flow\Core\Bootstrap
