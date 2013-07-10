@@ -1,21 +1,22 @@
 
-'Lelesys.Plugin.NodeTypes:SocialBookmarks':
+'Lelesys.Plugin.SocialBookmarks:SocialBookmarks':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    label: 'Lelesys SocialBookmark Structure'
-    group: Plugins
+    label: 'SocialBookmark Container'
+    group: Structure
     inlineEditable: true
     icon: 'icon-puzzle-piece'
   childNodes:
-    socialBookmark:
+    items:
       type: 'TYPO3.Neos:ContentCollection'
-'Lelesys.Plugin.NodeTypes:SocialBookmarkItem':
+
+'Lelesys.Plugin.SocialBookmarks:SocialBookmarkItem':
   superTypes:
     - 'TYPO3.Neos.NodeTypes:Text'
   ui:
-    label: 'Lelesys SocialBookmark Item'
-    group: Plugins
+    label: 'SocialBookmark Item'
+    group: Structure
     inlineEditable: true
     icon: 'icon-puzzle-piece'
     inspector:
@@ -24,11 +25,11 @@
           label: Options
           priority: 30
   properties:
-    socialBookmarkList:
+    channel:
       type: string
       defaultValue: social-facebook-box-blue-icon.png
       ui:
-        label: 'Select Social Media'
+        label: 'Social Media Channel'
         inspector:
           group: options
           editor: Content/Inspector/Editors/SelectBoxEditor

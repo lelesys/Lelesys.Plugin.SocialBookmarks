@@ -1,40 +1,33 @@
-{namespace t=TYPO3\Neos\ViewHelpers}
-{namespace link= Lelesys\Plugin\SocialBookmarks\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
 <f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
 	<f:then>
-		<t:contentElement node="{node}">
-			<f:if condition="{socialBookmarkList}">
+		<neos:contentElement node="{node}">
+			<f:if condition="{channel}">
 				<f:then>
-					<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
+					<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a></li>
 				</f:then>
 			</f:if>
-		</t:contentElement>
+		</neos:contentElement>
 	</f:then>
 	<f:else>
-		<f:if condition="{socialBookmarkList} == 'social-facebook-box-blue-icon.png'">
-			<f:then>
-				<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<link:shareLink/>"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
-			</f:then>
-		</f:if>
-		<f:if condition="{socialBookmarkList} == 'social-twitter-box-blue-icon.png'">
-			<f:then>
-				<li><a href="https://twitter.com/share" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
-			</f:then>
-		</f:if>
-		<f:if condition="{socialBookmarkList} == 'social-linkedin-box-blue-icon.png'">
-			<f:then>
-				<li><a href="http://www.linkedin.com/shareArticle?mini=false&url=<link:shareLink/>" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
-			</f:then>
-		</f:if>
-		<f:if condition="{socialBookmarkList} == 'Google-plus-icon.png'">
-			<f:then>
-				<li><a href="https://plus.google.com/share?url=<link:shareLink/>" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
-			</f:then>
-		</f:if>
-		<f:if condition="{socialBookmarkList} == 'social-digg-box-white-icon.png'">
-			<f:then>
-				<li><a href="http://digg.com/submit?&url=<link:shareLink/>" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{socialBookmarkList}')}"></a></li>
-			</f:then>
-		</f:if>
+		<f:switch expression="{channel}">
+			<li>
+				<f:case value="social-facebook-box-blue-icon.png">
+					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={currentUri}"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
+				</f:case>
+				<f:case value="social-twitter-box-blue-icon.png">
+					<a href="https://twitter.com/share" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
+				</f:case>
+				<f:case value="social-linkedin-box-blue-icon.png">
+					<a href="http://www.linkedin.com/shareArticle?mini=false&url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
+				</f:case>
+				<f:case value="Google-plus-icon.png">
+					<a href="https://plus.google.com/share?url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
+				</f:case>
+				<f:case value="social-digg-box-white-icon.png">
+					<a href="http://digg.com/submit?&url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
+				</f:case>
+			</li>
+		</f:switch>
 	</f:else>
 </f:security.ifAccess>

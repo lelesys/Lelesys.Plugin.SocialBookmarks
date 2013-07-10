@@ -1,16 +1,16 @@
-prototype(Lelesys.Plugin.NodeTypes:SocialBookmarks) < prototype(TYPO3.Neos:Template)
-prototype(Lelesys.Plugin.NodeTypes:SocialBookmarks) {
+prototype(Lelesys.Plugin.SocialBookmarks:SocialBookmarks) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.SocialBookmarks:SocialBookmarks) {
 	templatePath = 'resource://Lelesys.Plugin.SocialBookmarks/Private/Templates/TypoScript/SocialBookmarkStructure.html'
-	socialBookmarkCollection = ${q(node).children('socialBookmark').children()}
+
 	socialBookmarkItemCollection = TYPO3.Neos:ContentCollection
 	socialBookmarkItemCollection {
-		nodePath = 'socialBookmark'
-		collection = ${q(node).children()}
+		nodePath = 'items'
 	}
 }
 
-prototype(Lelesys.Plugin.NodeTypes:SocialBookmarkItem) < prototype(TYPO3.Neos.NodeTypes:Text)
-prototype(Lelesys.Plugin.NodeTypes:SocialBookmarkItem) {
+prototype(Lelesys.Plugin.SocialBookmarks:SocialBookmarkItem) < prototype(TYPO3.Neos.NodeTypes:Text)
+prototype(Lelesys.Plugin.SocialBookmarks:SocialBookmarkItem) {
 	templatePath = 'resource://Lelesys.Plugin.SocialBookmarks/Private/Templates/TypoScript/SocialBookmarkItem.html'
-	socialBookmarkList = ${q(node).property('socialBookmarkList')}
+	channel = ${q(node).property('channel')}
+	currentUri = ${request.httpRequest.uri}
 }
