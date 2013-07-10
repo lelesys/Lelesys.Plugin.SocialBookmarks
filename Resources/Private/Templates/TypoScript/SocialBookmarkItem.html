@@ -11,23 +11,21 @@
 	</f:then>
 	<f:else>
 		<f:switch expression="{channel}">
-			<li>
-				<f:case value="social-facebook-box-blue-icon.png">
-					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={currentUri}"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
-				</f:case>
-				<f:case value="social-twitter-box-blue-icon.png">
-					<a href="https://twitter.com/share" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
-				</f:case>
-				<f:case value="social-linkedin-box-blue-icon.png">
-					<a href="http://www.linkedin.com/shareArticle?mini=false&url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
-				</f:case>
-				<f:case value="Google-plus-icon.png">
-					<a href="https://plus.google.com/share?url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
-				</f:case>
-				<f:case value="social-digg-box-white-icon.png">
-					<a href="http://digg.com/submit?&url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a>
-				</f:case>
-			</li>
+			<f:case value="social-facebook-box-blue-icon.png">
+				<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={currentUri}"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			</f:case>
+			<f:case value="social-twitter-box-blue-icon.png">
+				<li><a href="https://twitter.com/share" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			</f:case>
+			<f:case value="social-linkedin-box-blue-icon.png">
+				<li><a href="http://www.linkedin.com/shareArticle?mini=false&amp;url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			</f:case>
+			<f:case value="Google-plus-icon.png">
+				<li><a href="https://plus.google.com/share?url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			</f:case>
+			<f:case value="social-digg-box-white-icon.png">
+				<li><a href="http://digg.com/submit?&amp;url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			</f:case>
 		</f:switch>
 	</f:else>
 </f:security.ifAccess>
