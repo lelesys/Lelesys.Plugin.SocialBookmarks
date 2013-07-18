@@ -4,27 +4,43 @@
 		<neos:contentElement node="{node}">
 			<f:if condition="{channel}">
 				<f:then>
-					<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}"></a></li>
+					<f:switch expression="{channel}">
+						<f:case value="social-facebook">
+							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-facebook-box-blue-icon.png')}" alt="{channel}" /></a></li>
+						</f:case>
+						<f:case value="social-twitter">
+							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-twitter-box-blue-icon.png')}" alt="{channel}" /></a></li>
+						</f:case>
+						<f:case value="social-linkedin">
+							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-linkedin-box-blue-icon.png')}" alt="{channel}" /></a></li>
+						</f:case>
+						<f:case value="social-google-plus">
+							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/Google-plus-icon.png')}" alt="{channel}" /></a></li>
+						</f:case>
+						<f:case value="social-digg">
+							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-digg-box-white-icon.png')}" alt="{channel}" /></a></li>
+						</f:case>
+					</f:switch>
 				</f:then>
 			</f:if>
 		</neos:contentElement>
 	</f:then>
 	<f:else>
 		<f:switch expression="{channel}">
-			<f:case value="social-facebook-box-blue-icon.png">
-				<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={currentUri}"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			<f:case value="social-facebook">
+				<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={currentUri}"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-facebook-box-blue-icon.png')}" alt="{channel}" /></a></li>
 			</f:case>
-			<f:case value="social-twitter-box-blue-icon.png">
-				<li><a href="https://twitter.com/share" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			<f:case value="social-twitter">
+				<li><a href="https://twitter.com/share" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-twitter-box-blue-icon.png')}" alt="{channel}" /></a></li>
 			</f:case>
-			<f:case value="social-linkedin-box-blue-icon.png">
-				<li><a href="http://www.linkedin.com/shareArticle?mini=false&amp;url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			<f:case value="social-linkedin">
+				<li><a href="http://www.linkedin.com/shareArticle?mini=false&amp;url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-linkedin-box-blue-icon.png')}" alt="{channel}" /></a></li>
 			</f:case>
-			<f:case value="Google-plus-icon.png">
-				<li><a href="https://plus.google.com/share?url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			<f:case value="social-google-plus">
+				<li><a href="https://plus.google.com/share?url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/Google-plus-icon.png')}" alt="{channel}" /></a></li>
 			</f:case>
-			<f:case value="social-digg-box-white-icon.png">
-				<li><a href="http://digg.com/submit?&amp;url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/{channel}')}" alt="{channel}" /></a></li>
+			<f:case value="social-digg">
+				<li><a href="http://digg.com/submit?&amp;url={currentUri}" target="_blank"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-digg-box-white-icon.png')}" alt="{channel}" /></a></li>
 			</f:case>
 		</f:switch>
 	</f:else>

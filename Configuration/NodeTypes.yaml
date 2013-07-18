@@ -27,7 +27,7 @@
   properties:
     channel:
       type: string
-      defaultValue: social-facebook-box-blue-icon.png
+      defaultValue: social-facebook
       ui:
         label: 'Social Media Channel'
         inspector:
@@ -35,14 +35,14 @@
           editor: Content/Inspector/Editors/SelectBoxEditor
           editorOptions:
             values:
-              social-facebook-box-blue-icon.png:
+              social-facebook:
                 label: Facebook
-              social-twitter-box-blue-icon.png:
+              social-twitter:
                 label: Twitter
-              social-linkedin-box-blue-icon.png:
+              social-linkedin:
                 label: Linkedin
-              Google-plus-icon.png:
+              social-google-plus:
                 label: 'Google plus'
-              social-digg-box-white-icon.png:
+              social-digg:
                 label: Digg
         reloadIfChanged: true
