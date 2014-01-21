@@ -1,29 +1,27 @@
 {namespace neos=TYPO3\Neos\ViewHelpers}
-<f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
+<f:security.ifAccess resource="TYPO3_Neos_Backend_GeneralAccess">
 	<f:then>
-		<neos:contentElement node="{node}">
-			<f:if condition="{channel}">
-				<f:then>
-					<f:switch expression="{channel}">
-						<f:case value="social-facebook">
-							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-facebook-box-blue-icon.png')}" alt="{channel}" /></a></li>
-						</f:case>
-						<f:case value="social-twitter">
-							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-twitter-box-blue-icon.png')}" alt="{channel}" /></a></li>
-						</f:case>
-						<f:case value="social-linkedin">
-							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-linkedin-box-blue-icon.png')}" alt="{channel}" /></a></li>
-						</f:case>
-						<f:case value="social-google-plus">
-							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/Google-plus-icon.png')}" alt="{channel}" /></a></li>
-						</f:case>
-						<f:case value="social-digg">
-							<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-digg-box-white-icon.png')}" alt="{channel}" /></a></li>
-						</f:case>
-					</f:switch>
-				</f:then>
-			</f:if>
-		</neos:contentElement>
+		<f:if condition="{channel}">
+			<f:then>
+				<f:switch expression="{channel}">
+					<f:case value="social-facebook">
+						<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-facebook-box-blue-icon.png')}" alt="{channel}" /></a></li>
+					</f:case>
+					<f:case value="social-twitter">
+						<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-twitter-box-blue-icon.png')}" alt="{channel}" /></a></li>
+					</f:case>
+					<f:case value="social-linkedin">
+						<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-linkedin-box-blue-icon.png')}" alt="{channel}" /></a></li>
+					</f:case>
+					<f:case value="social-google-plus">
+						<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/Google-plus-icon.png')}" alt="{channel}" /></a></li>
+					</f:case>
+					<f:case value="social-digg">
+						<li><a href="javascript:void(0)"><img src="{f:uri.resource(package:'Lelesys.Plugin.SocialBookmarks', path:'Icons/social-digg-box-white-icon.png')}" alt="{channel}" /></a></li>
+					</f:case>
+				</f:switch>
+			</f:then>
+		</f:if>
 	</f:then>
 	<f:else>
 		<f:switch expression="{channel}">

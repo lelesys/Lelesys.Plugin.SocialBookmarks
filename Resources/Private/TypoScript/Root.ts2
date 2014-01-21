@@ -1,4 +1,4 @@
-prototype(Lelesys.Plugin.SocialBookmarks:SocialBookmarks) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.SocialBookmarks:SocialBookmarks) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.SocialBookmarks:SocialBookmarks) {
 	templatePath = 'resource://Lelesys.Plugin.SocialBookmarks/Private/Templates/TypoScript/SocialBookmarkStructure.html'
 

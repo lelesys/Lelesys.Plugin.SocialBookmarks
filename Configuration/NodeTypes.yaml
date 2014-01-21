@@ -4,7 +4,7 @@
     - 'TYPO3.Neos:Content'
   ui:
     label: 'SocialBookmark Container'
-    group: Structure
+    group: structure
     inlineEditable: true
     icon: 'icon-puzzle-piece'
   childNodes:
@@ -16,7 +16,7 @@
     - 'TYPO3.Neos.NodeTypes:Text'
   ui:
     label: 'SocialBookmark Item'
-    group: Structure
+    group: structure
     inlineEditable: true
     icon: 'icon-puzzle-piece'
     inspector:
