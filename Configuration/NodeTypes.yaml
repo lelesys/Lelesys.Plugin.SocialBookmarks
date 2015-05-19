@@ -1,7 +1,7 @@
 
 'Lelesys.Plugin.SocialBookmarks:SocialBookmarks':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'SocialBookmark Container'
     group: structure
@@ -13,7 +13,7 @@
 
 'Lelesys.Plugin.SocialBookmarks:SocialBookmarkItem':
   superTypes:
-    - 'TYPO3.Neos.NodeTypes:Text'
+    'TYPO3.Neos.NodeTypes:Text': TRUE
   ui:
     label: 'SocialBookmark Item'
     group: structure
